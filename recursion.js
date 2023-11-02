@@ -6,7 +6,7 @@ function multiply(array){
   }
   return array[array.length-1]*multiply(array.slice(0,array.length-1))
 }
-console.log(multiply([1,2,3,4]))
+// console.log(multiply([1,2,3,4]))
 
 
 
@@ -17,7 +17,7 @@ function factorial(n){
 
   return n*factorial(n-1)
 }
-console.log(factorial(4))
+// console.log(factorial(4))
 
 
 
@@ -30,7 +30,7 @@ function rangeOfNumbers(start,end){
   numbers.push(end)
   return numbers
 }
-console.log(rangeOfNumbers(0,5))
+// console.log(rangeOfNumbers(0,5))
 
 
 // Qs 3; Given an integer x, return true if x is a palindrome, and false otherwise,
@@ -50,7 +50,7 @@ function isPalindrome(n) {
   return isPalindrome(str.slice(1, -1));
 }
 
-console.log(isPalindrome(12121212))
+// console.log(isPalindrome(12121212))
 
 
 // QS 4: fibnocci Number 
@@ -63,7 +63,7 @@ function fib(n){
   return fib(n-1)+fib(n-2)
 
 }
-console.log(fib(4))
+// console.log(fib(4))
 
 
 
@@ -77,7 +77,7 @@ function reverseString(str){
    }
    return reverseString(str.substring(1))+str.charAt(0)
 }
-console.log(reverseString('yunus'))
+// console.log(reverseString('yunus'))
 
 
 
@@ -107,7 +107,30 @@ function subSets(nums,i){
    return result;
 }
 
-console.log(subSets([1,2,3],0))
+// console.log(subSets([1,2,3],0))
 
 
 
+// palindrom
+
+function palindrom(i , string){
+
+  if(i>=string.length/2) return true
+
+  if(string[i]!=string[string.length-i-1]) return false
+
+ return palindrom(i+1,string)
+}
+
+// console.log(palindrom(0,'asdfjkllklkjfdsa'))
+
+
+function sumOfArray(arr,n){
+  if(n<=0) return 0
+
+  return sumOfArray(arr,n-1)+arr[n-1]
+}
+
+let array=[1,2,3,4,5,10]
+let n=array.length
+console.log(sumOfArray(array,n))

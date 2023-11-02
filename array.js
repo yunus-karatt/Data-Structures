@@ -13,8 +13,8 @@ function findSecondLargest(array){
   }
   return secondLargest
 }
-console.log(findSecondLargest([12,35,1,10,34,1]))
-console.log(findSecondLargest([10,5,10]))
+// console.log(findSecondLargest([12,35,1,10,34,1]))
+// console.log(findSecondLargest([10,5,10]))
 
 function findSecondLargest(array){
   const uniqueArray=Array.from (new Set(array))
@@ -22,8 +22,8 @@ function findSecondLargest(array){
   uniqueArray.sort((a,b)=>b-a)
   return uniqueArray[1]
 }
-console.log(findSecondLargest([12,35,1,10,34,1]))
-console.log(findSecondLargest([10,5,10]))
+// console.log(findSecondLargest([12,35,1,10,34,1]))
+// console.log(findSecondLargest([10,5,10]))
 
 // QS 2;Rotate array by k 
 
@@ -33,12 +33,13 @@ function rotateArray(array,k){
     k=k%size
   }
   const rotated=array.splice(size-k,size)
+  console.log('...rotated',rotated)
   array.unshift(...rotated)
   return array
 }
 console.log(rotateArray([1,2,3,4,5],2))
 
-function rotateArray(array,k){
+function rotateArrayRecursion(array,k){
   let size=array.length
   if(k>size){
     k=k%size
@@ -56,7 +57,7 @@ function rotateArrayHelper(arr,left,right){
       arr[right--]=temp
     }
 }
-console.log(rotateArray([1,2,3,4,5,6,7],3))
+// console.log(rotateArray([1,2,3,4,5,6,7],3))
 
 
 
@@ -74,7 +75,7 @@ function removeDuplicate(arr){
   }
   return arr.length
 }
-console.log(removeDuplicate([0,0,1,1,1,2,2,3,3,4]))
+// console.log(removeDuplicate([0,0,1,1,1,2,2,3,3,4]))
 
 
 // method 2 remove duplicate
@@ -90,7 +91,7 @@ function removeDuplicate(arr){
   }
   return i+1
 }
-console.log(removeDuplicate([0,0,1,1,1,2,2,3,3,4]))
+// console.log(removeDuplicate([0,0,1,1,1,2,2,3,3,4]))
 
 // Qs 5=given an integer array of nums,find the subarray with the largest sum,
 //  and retrun its sum
@@ -108,7 +109,7 @@ function maxSubArray(nums){
   }
   return maxSum
 }
-console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+// console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
 
 function secondMaxSubarray(nums){
   let maxSum=nums[0]

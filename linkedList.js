@@ -161,7 +161,7 @@ list.append(30)
 list.append(30)
 list.append(59)
 list.print()
-list.reverse()
+list.deletebefore(30,1)
 list.print()
 
 
@@ -222,18 +222,18 @@ var deleteNode = function (node) {
 
 // 19. Remove Nth Node From End of List (leetcode)
 
-// var removeNthFromEnd = function(head, n) {
-//   let fast=head
-//   let slow=head
-//   for(let i=0;i<n;i++){
-//       fast=fast.next
-//   }
-//   if(!fast)
-//   return head.next
-//   while(fast.next){
-//       fast=fast.next
-//       slow=slow.next
-//   }
-//   slow.next=slow.next.next
-//   return head
-// };
+var removeNthFromEnd = function(head, n) {
+  let fast=head
+  let slow=head
+  for(let i=0;i<n;i++){
+      fast=fast.next
+  }
+  if(!fast)
+  return head.next
+  while(fast.next){
+      fast=fast.next
+      slow=slow.next
+  }
+  slow.next=slow.next.next
+  return head
+};

@@ -10,7 +10,7 @@ function truncate(str,maxlength){
   }
 }
 
-// console.log(truncate('Subscribe to roadsidecoder',9))
+console.log(truncate('Subscribe to roadsidecoder',9))
 
 // QS 2
 // palindrom
@@ -47,7 +47,7 @@ var isAnagram = function (s, t) {
       obj1[s[i]] = (obj1[s[i]] || 0) + 1
       obj2[t[i]] = (obj2[t[i]] || 0) + 1
   }
-console.log(obj1,obj2)
+
   for(const key in obj1){
 
       if(obj1[key]!==obj2[key]) return false
@@ -55,4 +55,5 @@ console.log(obj1,obj2)
   return true
 }
 
-console.log(isAnagram('rats','tara'))
+// console.log(isAnagram('rats','tara'))
+
