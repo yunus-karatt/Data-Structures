@@ -69,6 +69,8 @@ table.set('name', 'yunus')
 table.set('age', 37)
 table.set('mane', 'karatt')
 table.set('name', 'yunussss')
+table.remove('mane')
+table.display()
 
 // table.display()
 

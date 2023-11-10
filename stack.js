@@ -193,15 +193,13 @@ function deleteMiddle(arr,current,size){
   if(arr.length<=0) return
 
   const x=arr.pop()
-  console.log('pop',x,current)
   deleteMiddle(arr,current+1,size)
 
 
   if(current!=Math.floor(size/2)){
-    console.log(current,x)
     arr.push(x)
   }
 }
 
 deleteMiddle(stackSample,0,stackSample.length)
-console.log(stackSample)
+console.log('hrer',stackSample)
